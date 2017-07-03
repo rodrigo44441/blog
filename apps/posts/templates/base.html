@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% block title %}
+		<title> --- Titulo --- </title>
+	{% endblock title %}
+	{% block css %}	{% endblock css %}
+	
+</head>
+<body>
+	<header>
+		<a href="http://www.google.com"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTmYTBvlcQDa7Hx9MsmT9GcECzKlO1AbFwHuoMZBTAf05CD7WaV" alt=""/></a>
+	</header>
+    <nav class="menu">MENU</nav>
+	{% block content %}
+
+	{% endblock content %}
+	
+	<footer>
+      <div class="footer"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque necessitatibus voluptates fugiat, optio, odio nisi expedita ipsam commodi natus ut cumque, sed sequi fuga! Nesciunt earum voluptate ducimus, ab sint!</div>
+    </footer>
+	{% block js %}{% endblock js %}
+</body>
+</html>

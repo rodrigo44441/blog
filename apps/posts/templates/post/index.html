@@ -1,0 +1,30 @@
+{% extends "post/base_blog.html" %}
+
+{# {% block title %} ESTOY EN EL TITULO DEL BLOG {% endblock title %} #}
+
+{% block content %}
+	<container>
+      <aside>
+        <h2>TITULO ASIDE</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita repudiandae, veniam dolor, sunt nostrum minus enim provident doloribus architecto assumenda dignissimos reprehenderit nemo culpa incidunt. Qui deleniti, modi doloremque ipsa.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur enim ut magnam veritatis facilis natus, velit vitae voluptatum blanditiis, est dolorum autem quo. Ex itaque placeat aut facere amet, earum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint consequuntur natus nam tenetur numquam ut, expedita, optio, quas voluptates totam quae sequi nesciunt? Ipsam alias quidem, asperiores, sunt vitae quia! test 2
+        </p>
+      </aside>
+      
+      <section>
+      	{% for post in posts %}
+	        <article> 
+	          <h3 class="article">{{ post.title }}</h3>
+	        {% load static from staticfiles %}
+	          {% if post.image %}
+	          <a href="/post/{{ post.slug }}">
+	          	<img src="{{ MEDIA_URL }}{{ post.image.url }}" alt=""/>
+	          	</a>
+	          {% endif %}
+	          <p class="article"> {{ post.content}} </p>
+	        </article>
+        {% endfor %}
+        
+      </section>
+    </container>
+	
+{% endblock content %}
