@@ -1,3 +1,4 @@
+*.sh
 
 # Created by https://www.gitignore.io/api/linux,django
 
@@ -9,7 +10,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
-blog/blog/settings/staging.py
+blog/settings/staging.py
 prueba.txt
 
 ### Linux ###
