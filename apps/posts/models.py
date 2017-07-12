@@ -13,7 +13,7 @@ class Category(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length = 200, unique = True)
 	summary = models.CharField(max_length = 200, unique = True, blank = True)
-	slug = models.SlugField(blank=False, null=False, unique = True)
+	slug = models.SlugField(blank=False, null=False)
 	content = models.TextField(blank = True)
 	created = models.DateTimeField(auto_now_add = True, editable = True)
 	modified = models.DateTimeField(auto_now = True, editable = True)
