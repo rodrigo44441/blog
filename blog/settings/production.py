@@ -16,6 +16,8 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT='/opt/statics/blog/'
+
 STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR.child('staticfiles')
 
