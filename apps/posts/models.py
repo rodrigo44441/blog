@@ -21,11 +21,11 @@ class Post(models.Model):
 	image = models.ImageField(upload_to = 'posts', blank = True)
 	video = models.FileField(upload_to = 'posts', blank = True)
 	attached = models.ImageField(upload_to = 'posts', blank = True)
-	numero = models.PositiveIntegerField(default=3, editable=True)
+#	numero = models.PositiveIntegerField(default=3, editable=True)
 
 	def save(self, *args, **kwargs):
 		if not self.id:
-			self.slug = '-'.join((slugify(self.title), slugify(self.numero)))
+			self.slug = slugify(self.title)
 		super(Post, self).save(*args, **kwargs)
 
 	def __unicode__(self):
