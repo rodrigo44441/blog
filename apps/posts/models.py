@@ -21,7 +21,7 @@ class Post(models.Model):
 	image = models.ImageField(upload_to = 'posts', blank = True)
 	video = models.FileField(upload_to = 'posts', blank = True)
 	attached = models.ImageField(upload_to = 'posts', blank = True)
-	numero = models.PositiveIntegerField(default=1)
+	numero = models.PositiveIntegerField(default=3, editable=True)
 
 	def save(self, *args, **kwargs):
 		if not self.id:
