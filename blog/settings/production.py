@@ -8,7 +8,7 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blog', 
+        'NAME': 'indarra_db', 
         'USER': 'rodrigo', 
         'PASSWORD': 'rodrigo',
         'HOST': '127.0.0.1',
