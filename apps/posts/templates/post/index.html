@@ -11,19 +11,7 @@
       </aside>
       
       <section>
-      	{% for post in posts %}
-	        <article> 
-	          <h3 class="article">{{ post.title }}</h3>
-	        {% load static from staticfiles %}
-	          {% if post.image %}
-	          <a href="/post/{{ post.slug }}">
-	          	<img src="{{ MEDIA_URL }}{{ post.image.url }}" alt=""/>
-	          	</a>
-	          {% endif %}
-	          <p class="article"> {{ post.content}} </p>
-	        </article>
-        {% endfor %}
-        
+
       </section>
     </container>
 	
