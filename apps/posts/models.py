@@ -3,41 +3,14 @@ from django.template.defaultfilters import slugify
 
 from django.db import models
 
-# class Category(models.Model):
-# 	name = models.CharField(max_length = 200, unique = True)
-# 	description = models.CharField(max_length = 200)
-
-# 	def __unicode__(self):
-# 		return self.name
-
-# class Post(models.Model):
-# 	title = models.CharField(max_length = 200, unique = True)
-# 	summary = models.CharField(max_length = 200, unique = True, blank = True)
-# 	slug = models.SlugField(blank=False, null=False)
-# 	content = models.TextField(blank = True)
-# 	created = models.DateTimeField(auto_now_add = True, editable = True)
-# 	modified = models.DateTimeField(auto_now = True, editable = True)
-# 	category = models.ForeignKey(Category)
-# 	image = models.ImageField(upload_to = 'posts', blank = True)
-# 	video = models.FileField(upload_to = 'posts', blank = True)
-# 	attached = models.ImageField(upload_to = 'posts', blank = True)
-
-# 	def save(self, *args, **kwargs):
-# 		if not self.id:
-# 			self.slug = slugify(self.title)
-# 		super(Post, self).save(*args, **kwargs)
-
-# 	def __unicode__(self):
-# 		return self.title
-
-class Tag(models.Model):
+class Category(models.Model):
 	name = models.CharField(max_length = 200, unique = True)
 	description = models.CharField(max_length = 200)
 
 	def __unicode__(self):
 		return self.name
 
-class Note(models.Model):
+class Post(models.Model):
 	title = models.CharField(max_length = 200, unique = True)
 	summary = models.CharField(max_length = 200, unique = True, blank = True)
 	slug = models.SlugField(blank=False, null=False)
@@ -45,9 +18,9 @@ class Note(models.Model):
 	created = models.DateTimeField(auto_now_add = True, editable = True)
 	modified = models.DateTimeField(auto_now = True, editable = True)
 	category = models.ForeignKey(Category)
-	image = models.ImageField(upload_to = 'notes', blank = True)
-	video = models.FileField(upload_to = 'notes', blank = True)
-	attached = models.ImageField(upload_to = 'notes', blank = True)
+	image = models.ImageField(upload_to = 'posts', blank = True)
+	video = models.FileField(upload_to = 'posts', blank = True)
+	attached = models.ImageField(upload_to = 'posts', blank = True)
 
 	def save(self, *args, **kwargs):
 		if not self.id:
